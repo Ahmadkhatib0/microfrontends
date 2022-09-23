@@ -1,10 +1,4 @@
-import faker from 'faker';
-
-let products = '';
-
-for (let i = 0; i < 6; i++) {
-  const name = faker.commerce.productName();
-  products += `<div>${name}</div>`;
-}
-
-document.querySelector('#div-products').innerHTML = products;
+import('./bootstrap');
+// All this does is give webpack the ability to asynchronously load up the bootstrap JS file.
+// And because we are loading up that code asynchronously, Westpac has the opportunity in the browser
+// just to realize that before we run this code, we also have to fetch Faker.

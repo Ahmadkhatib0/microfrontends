@@ -10,7 +10,11 @@ module.exports = {
     new ModuleFederationPlugin({
       name: 'products',
       filename: 'remoteEntry.js',
-      exposes: { './ProductsIndex': './src/index.js' },
+      exposes: { './ProductsIndex': './src/bootstrap' },
+      // shared: {
+      //   faker: { singleton: true },
+      // },
+      shared: ['faker'],
     }),
     new HtmlWebpackPlugin({
       template: './public/index.html',
