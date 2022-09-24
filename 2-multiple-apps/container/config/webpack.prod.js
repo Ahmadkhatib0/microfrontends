@@ -9,6 +9,7 @@ const prodConfig = {
   mode: 'development',
   output: {
     filename: '[name].[contenthash].js',
+    publicPath: '/container/latest/', //will prefixes the files names, e,g /container/latest/main.js
   },
   plugins: [
     new ModuleFederationPlugin({
