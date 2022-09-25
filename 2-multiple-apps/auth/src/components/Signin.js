@@ -62,11 +62,7 @@ export default function SignIn({ onSignIn }) {
         <Typography component="h1" variant="h5">
           Sign in
         </Typography>
-        <form
-          onSubmit={(e) => e.preventDefault()}
-          className={classes.form}
-          noValidate
-        >
+        <form onSubmit={(e) => e.preventDefault()} className={classes.form} noValidate>
           <TextField
             variant="outlined"
             margin="normal"
@@ -99,8 +95,7 @@ export default function SignIn({ onSignIn }) {
             variant="contained"
             color="primary"
             className={classes.submit}
-            onClick={onSignIn}
-          >
+            onClick={onSignIn}>
             Sign In
           </Button>
           <Grid container>
